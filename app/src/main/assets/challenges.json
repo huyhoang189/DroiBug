@@ -1,0 +1,44 @@
+[
+  {
+    "id": "improper_credential_usage",
+    "title": "Improper Credential Usage",
+    "description": "Lỗ hổng sử dụng thông tin đăng nhập không an toàn.",
+    "imageId": "ic_credential"
+  },
+  {
+    "id": "insecure_authentication",
+    "title": "Insecure Authentication/Authorization",
+    "description": "Lỗ hổng xác thực và phân quyền không an toàn.",
+    "imageId": "ic_auth"
+  },
+  {
+    "id": "insufficient_input_validation",
+    "title": "Insufficient In/Out Validation",
+    "description": "Lỗ hổng kiểm tra dữ liệu đầu vào/đầu ra không đủ chặt chẽ.",
+    "imageId": "ic_input_validation"
+  },
+  {
+    "id": "inadequate_privacy_controls",
+    "title": "Inadequate Privacy Controls",
+    "description": "Lỗ hổng kiểm soát quyền riêng tư không an toàn.",
+    "imageId": "ic_privacy"
+  },
+  {
+    "id": "insufficient_binary_protection",
+    "title": "Insufficient Binary Protections",
+    "description": "Lỗ hổng bảo vệ nhị phân không đủ mạnh.",
+    "imageId": "ic_binary"
+  },
+  {
+    "id": "insecure_data_storage",
+    "title": "Insecure Data Storage",
+    "description": "Lỗ hổng lưu trữ dữ liệu không an toàn.",
+    "imageId": "ic_data_storage"
+  },
+  {
+    "id": "insufficient_cryptography",
+    "title": "Insufficient Cryptography",
+    "description": "Lỗ hổng mã hóa dữ liệu không đủ mạnh.",
+    "imageId": "ic_crypto"
+  }
+]

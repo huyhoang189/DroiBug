@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#F5F7FA">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CTF Challenge - Lab 10"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2E3B4E"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Truy cập dữ liệu Clipboard"
+        android:textSize="16sp"
+        android:textColor="#5D6D7E"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="8dp"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <EditText
+                    android:id="@+id/clip_board_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập vào thông tin tìm được"
+                    android:padding="16dp"
+                    android:drawablePadding="8dp"
+                    android:background="@drawable/edit_text_background"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kiểm tra Clipboard"
+                android:textAllCaps="false"
+                android:padding="12dp"
+                android:background="@drawable/button_primary_background"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/flag_text"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#4CAF50"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gợi ý: Dùng ADB Shell để tìm dữ liệu nhạy cảm"
+        android:textStyle="italic"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+
+</LinearLayout>
