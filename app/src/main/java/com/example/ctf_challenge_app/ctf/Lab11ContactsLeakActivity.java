@@ -1,6 +1,7 @@
 package com.example.ctf_challenge_app.ctf;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -16,8 +17,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Lab11ContactsLeakActivity extends AppCompatActivity {
 
@@ -40,6 +43,15 @@ public class Lab11ContactsLeakActivity extends AppCompatActivity {
         resultText = findViewById(R.id.flag_text);
 
         btn.setOnClickListener(v -> checkAndReadContacts());
+
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab11ContactsLeakActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_11");
+            startActivity(intent);
+        });
+
     }
 
     private void checkAndReadContacts() {

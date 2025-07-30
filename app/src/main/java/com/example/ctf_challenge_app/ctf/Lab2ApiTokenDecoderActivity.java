@@ -1,6 +1,7 @@
 package com.example.ctf_challenge_app.ctf;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Base64;
@@ -16,8 +17,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Lab2ApiTokenDecoderActivity extends AppCompatActivity {
 
@@ -53,6 +56,13 @@ public class Lab2ApiTokenDecoderActivity extends AppCompatActivity {
 
         btnGenerateToken.setOnClickListener(v -> generateAndSaveToken());
         btnVerifyKey.setOnClickListener(v -> verifyKey());
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab2ApiTokenDecoderActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_2");
+            startActivity(intent);
+        });
 
     }
 

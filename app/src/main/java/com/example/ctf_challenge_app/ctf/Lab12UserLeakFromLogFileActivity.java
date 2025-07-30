@@ -1,5 +1,6 @@
 package com.example.ctf_challenge_app.ctf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -14,8 +15,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 import java.io.BufferedReader;
@@ -71,6 +74,13 @@ public class Lab12UserLeakFromLogFileActivity extends AppCompatActivity {
                 Toast.makeText(this, "Đăng nhập không thành công!", Toast.LENGTH_SHORT).show();
             }
 
+        });
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab12UserLeakFromLogFileActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_12");
+            startActivity(intent);
         });
     }
 

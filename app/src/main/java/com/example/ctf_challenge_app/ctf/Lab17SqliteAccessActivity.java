@@ -1,6 +1,7 @@
 package com.example.ctf_challenge_app.ctf;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -15,8 +16,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Lab17SqliteAccessActivity extends AppCompatActivity {
 
@@ -53,6 +56,13 @@ public class Lab17SqliteAccessActivity extends AppCompatActivity {
             } else {
                 resultText.setText("Sai thông tin đăng nhập!");
             }
+        });
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab17SqliteAccessActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_17");
+            startActivity(intent);
         });
     }
 

@@ -2,6 +2,7 @@
 
 package com.example.ctf_challenge_app.ctf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
 import android.widget.Button;
@@ -14,9 +15,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.MainActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.nio.charset.StandardCharsets;
 
@@ -61,6 +64,13 @@ public class Lab20HardcodedKeyActivity extends AppCompatActivity {
             } catch (Exception e) {
                 resultText.setText("Lỗi mã hoá: " + e.getMessage());
             }
+        });
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab20HardcodedKeyActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_20");
+            startActivity(intent);
         });
     }
 

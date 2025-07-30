@@ -1,5 +1,6 @@
 package com.example.ctf_challenge_app.ctf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,8 +13,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Lab4ByPassSmaliActivity extends AppCompatActivity {
 
@@ -52,6 +55,13 @@ public class Lab4ByPassSmaliActivity extends AppCompatActivity {
                 flagText.setText("");
                 Toast.makeText(this, "Đăng nhập thất bại!", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab4ByPassSmaliActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_4");
+            startActivity(intent);
         });
     }
 }

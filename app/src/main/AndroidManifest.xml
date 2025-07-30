@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ctfchallengeapp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
         <activity
             android:name=".ctf.Lab21BypassCryptoCheckActivity"
             android:exported="false" />

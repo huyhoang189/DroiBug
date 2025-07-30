@@ -1,5 +1,6 @@
 package com.example.ctf_challenge_app.ctf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,8 +12,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Lab15HookFridaVerifyActivity extends AppCompatActivity {
 
@@ -40,6 +43,15 @@ public class Lab15HookFridaVerifyActivity extends AppCompatActivity {
                 result.setText("Mã không hợp lệ");
             }
         });
+
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab15HookFridaVerifyActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_15");
+            startActivity(intent);
+        });
+
     }
 
     // Hàm này bị ẩn logic, trả về false mặc định

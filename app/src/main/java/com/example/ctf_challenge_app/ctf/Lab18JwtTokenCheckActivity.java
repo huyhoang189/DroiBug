@@ -1,6 +1,7 @@
 package com.example.ctf_challenge_app.ctf;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -18,8 +19,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ctf_challenge_app.HelpActivity;
 import com.example.ctf_challenge_app.R;
 import com.example.ctf_challenge_app.common.FlagManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -68,6 +71,13 @@ public class Lab18JwtTokenCheckActivity extends AppCompatActivity {
             } else {
                 resultText.setText("Mã người dùng không đúng!");
             }
+        });
+
+        FloatingActionButton helpButton = findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Lab18JwtTokenCheckActivity.this, HelpActivity.class);
+            intent.putExtra("LAB_CODE", "lab_18");
+            startActivity(intent);
         });
     }
 
